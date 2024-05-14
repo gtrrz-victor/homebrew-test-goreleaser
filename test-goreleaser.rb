@@ -20,7 +20,7 @@ class TestGoreleaser < Formula
     end
     on_arm do
       url "https://releases.codezero.io/2.3.1/headless-darwin-arm64.tgz", using: CurlDownloadStrategy
-      sha256 "0555f33bf033c2bc2ee4601a4bf9ae24c40b618b2ef9f98c9cb3fee1fd3f8aac"
+      sha256 "0bb57bf8953e6db9ecde4fa507498cb4751617b42938a194fc491fcafff93e1f"
 
       def install
         bin.install "czctl"
