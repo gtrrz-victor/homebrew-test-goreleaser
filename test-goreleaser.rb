@@ -5,12 +5,12 @@
 class TestGoreleaser < Formula
   desc "Testing gorelaser."
   homepage "https://??.io/"
-  version "0.0.13"
+  version "2.3.1"
 
   on_macos do
     on_intel do
-      url "https://releases.codezero.io/v0.0.13/headless-darwin-amd64.tgz", using: CurlDownloadStrategy
-      sha256 "a40bf8deecde664e8f44a19903ff740a6e86cd58de155cf312b0f143da9e5049"
+      url "https://releases.codezero.io/2.3.1/headless-darwin-amd64.tgz", using: CurlDownloadStrategy
+      sha256 "d1a294df0e603edd49be9871dfade8171e6d20ba0c9c714a9a2a5dd60f4e4f1b"
 
       def install
         bin.install "czctl"
@@ -19,8 +19,8 @@ class TestGoreleaser < Formula
       end
     end
     on_arm do
-      url "https://releases.codezero.io/v0.0.13/headless-darwin-arm64.tgz", using: CurlDownloadStrategy
-      sha256 "ab2d7c440afa3b8455955a0de0417e85a282b8eb55d2467aa1caa1ddf9d40782"
+      url "https://releases.codezero.io/2.3.1/headless-darwin-arm64.tgz", using: CurlDownloadStrategy
+      sha256 "0555f33bf033c2bc2ee4601a4bf9ae24c40b618b2ef9f98c9cb3fee1fd3f8aac"
 
       def install
         bin.install "czctl"
@@ -33,8 +33,8 @@ class TestGoreleaser < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://releases.codezero.io/v0.0.13/headless-linux-amd64.tgz", using: CurlDownloadStrategy
-        sha256 "f7928fafb8abe8b250c2ab52e00e829c70e26ee2cea6a856b00df46b7a786655"
+        url "https://releases.codezero.io/2.3.1/headless-linux-amd64.tgz", using: CurlDownloadStrategy
+        sha256 "702ee48c00978a337000bb1d4fcd7ec581f9917ea6ffecf5658ed55ba5e40b8d"
 
         def install
           bin.install "czctl"
@@ -45,8 +45,8 @@ class TestGoreleaser < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://releases.codezero.io/v0.0.13/headless-linux-arm64.tgz", using: CurlDownloadStrategy
-        sha256 "e8fa5edac1cad111d4bcfd4443f5a0085e6757315695a68f1b646d209650c9b0"
+        url "https://releases.codezero.io/2.3.1/headless-linux-arm64.tgz", using: CurlDownloadStrategy
+        sha256 "e83947afaaf99429fad20109fae50a92b1559f31bfbdf068387b384ddcfe67ee"
 
         def install
           bin.install "czctl"
