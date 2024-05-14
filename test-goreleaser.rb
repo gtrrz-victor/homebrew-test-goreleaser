@@ -5,23 +5,23 @@
 class TestGoreleaser < Formula
   desc "Testing gorelaser."
   homepage "https://??.io/"
-  version "0.0.9"
+  version "0.0.10"
 
   on_macos do
     on_intel do
-      url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/v0.0.9/test-goreleaser-0.0.9-darwin-amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "9edc996f01f81550cec1f4be9a35c3f426e9a8642323b41f3f7c2bd1418ccfbe"
+      url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/v0.0.10/test-goreleaser-0.0.10-darwin-amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "c04aa6b8ab3eee1a530a847a57fcc10a40567045fc41386cc9cf5b61a3a61eae"
 
       def install
-        bin.install "test"
+        bin.install "gttest"
       end
     end
     on_arm do
-      url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/v0.0.9/test-goreleaser-0.0.9-darwin-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "4ba4255ed49405d7488e3d745118a4612febabc3d89460aee811b6b52e548ba0"
+      url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/v0.0.10/test-goreleaser-0.0.10-darwin-arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "1b50cf4e5a67607fc499e05ed77adf409e0eb2bdd2c1c097d62f3c7004fecf66"
 
       def install
-        bin.install "test"
+        bin.install "gttest"
       end
     end
   end
@@ -29,21 +29,21 @@ class TestGoreleaser < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/v0.0.9/test-goreleaser-0.0.9-linux-amd64.tar.gz", using: CurlDownloadStrategy
-        sha256 "c8013213b43d21dc54940f1a62d8c40241689878131e67897f83c2e637fb4b2a"
+        url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/v0.0.10/test-goreleaser-0.0.10-linux-amd64.tar.gz", using: CurlDownloadStrategy
+        sha256 "8b937b0944150e6e5fd8cb1cd38d8de421f20d4310619a59b11f0b3c09004e3e"
 
         def install
-          bin.install "test"
+          bin.install "gttest"
         end
       end
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/v0.0.9/test-goreleaser-0.0.9-linux-arm64.tar.gz", using: CurlDownloadStrategy
-        sha256 "733eb7d9865a0f6ae9b222d4d84eda0bdc0ee3b39a67a117853643dae01d5d3e"
+        url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/v0.0.10/test-goreleaser-0.0.10-linux-arm64.tar.gz", using: CurlDownloadStrategy
+        sha256 "d9c69dc56c223086b8f1fdaff32409c806b3805b0acef3508351adfe07abc629"
 
         def install
-          bin.install "test"
+          bin.install "gttest"
         end
       end
     end
