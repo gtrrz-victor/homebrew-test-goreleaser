@@ -5,23 +5,27 @@
 class TestGoreleaser < Formula
   desc "Testing gorelaser."
   homepage "https://??.io/"
-  version "0.0.12"
+  version "0.0.13"
 
   on_macos do
     on_intel do
-      url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/v0.0.12/test-goreleaser-0.0.12-darwin-amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "00bc779b545101cf51032987db26bd5e1695f4b576881d5807d1996adf79b3c5"
+      url "https://releases.codezero.io/v0.0.13/headless-darwin-amd64.tgz", using: CurlDownloadStrategy
+      sha256 "a40bf8deecde664e8f44a19903ff740a6e86cd58de155cf312b0f143da9e5049"
 
       def install
-        bin.install "gttest"
+        bin.install "czctl"
+        bin.install "czdaemon"
+        bin.install "czsupervisor"
       end
     end
     on_arm do
-      url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/v0.0.12/test-goreleaser-0.0.12-darwin-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "1f96d58d9ceac3b7cb82207f59d33d1e64349a614f0cedc5167250009c04508a"
+      url "https://releases.codezero.io/v0.0.13/headless-darwin-arm64.tgz", using: CurlDownloadStrategy
+      sha256 "ab2d7c440afa3b8455955a0de0417e85a282b8eb55d2467aa1caa1ddf9d40782"
 
       def install
-        bin.install "gttest"
+        bin.install "czctl"
+        bin.install "czdaemon"
+        bin.install "czsupervisor"
       end
     end
   end
@@ -29,27 +33,27 @@ class TestGoreleaser < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/v0.0.12/test-goreleaser-0.0.12-linux-amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "6cc50eb5116bbf97262de60401fda809285c2462d3fb878a923357e89acc527d"
+        url "https://releases.codezero.io/v0.0.13/headless-linux-amd64.tgz", using: CurlDownloadStrategy
+        sha256 "f7928fafb8abe8b250c2ab52e00e829c70e26ee2cea6a856b00df46b7a786655"
 
         def install
-          bin.install "gttest"
+          bin.install "czctl"
+          bin.install "czdaemon"
+          bin.install "czsupervisor"
         end
       end
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/v0.0.12/test-goreleaser-0.0.12-linux-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "dab46c994f5b9a1c48889287d90d099050f1a6b1205603ea6858e372c294e6ac"
+        url "https://releases.codezero.io/v0.0.13/headless-linux-arm64.tgz", using: CurlDownloadStrategy
+        sha256 "e8fa5edac1cad111d4bcfd4443f5a0085e6757315695a68f1b646d209650c9b0"
 
         def install
-          bin.install "gttest"
+          bin.install "czctl"
+          bin.install "czdaemon"
+          bin.install "czsupervisor"
         end
       end
     end
-  end
-
-  test do
-    system "#{bin}"
   end
 end
