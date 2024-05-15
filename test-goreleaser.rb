@@ -5,20 +5,20 @@
 class TestGoreleaser < Formula
   desc "Testing gorelaser."
   homepage "https://??.io/"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     on_intel do
-      url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/0.1.1/test-goreleaser-0.1.1-darwin-amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "8ce2b8e22554b1eb75885641059b3f39fbd4e61a83837cc742fe9674634fa886"
+      url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/0.1.2/test-goreleaser-0.1.2-darwin-amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "1666cfb229223c43f19c976d49ee4fb48b3c48762d915a1550f0fc1bdd410238"
 
       def install
         bin.install "gttest"
       end
     end
     on_arm do
-      url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/0.1.1/test-goreleaser-0.1.1-darwin-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "861101982e4cc2f727e1f7a9010aaf90429da91408be0d69816cb0cf57a27c76"
+      url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/0.1.2/test-goreleaser-0.1.2-darwin-arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "284eb0056ca0e1a8d2c0f7c1c4a87abeec6593b923ed8b443086d9691397d40d"
 
       def install
         bin.install "gttest"
@@ -29,8 +29,8 @@ class TestGoreleaser < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/0.1.1/test-goreleaser-0.1.1-linux-amd64.tar.gz", using: CurlDownloadStrategy
-        sha256 "b03c6bc74fce4116a3c948f280dac64a658dd94a5b41eb2fc5b2bb9e6d9d299d"
+        url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/0.1.2/test-goreleaser-0.1.2-linux-amd64.tar.gz", using: CurlDownloadStrategy
+        sha256 "45c223150ab22e232af462464f6f50a82050b2c7b110a1bb789292e823f5e832"
 
         def install
           bin.install "gttest"
@@ -39,8 +39,8 @@ class TestGoreleaser < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/0.1.1/test-goreleaser-0.1.1-linux-arm64.tar.gz", using: CurlDownloadStrategy
-        sha256 "e8a414a411ca3242be387abf098e40c574e27104fa0af4e53b7874b7d23a3744"
+        url "https://github.com/gtrrz-victor/test-goreleaser/releases/download/0.1.2/test-goreleaser-0.1.2-linux-arm64.tar.gz", using: CurlDownloadStrategy
+        sha256 "b2431ab3c6f77b2b6492f9e3d2d8fd04101202d2011c09af8abf040e8fca9bc6"
 
         def install
           bin.install "gttest"
